@@ -1,8 +1,11 @@
 <ul class="list-group">
-  <li *ngFor="let item of menuItems"
+  <li *ngFor="let item of menuItems()"
      class="list-group-item"
      [routerLink]="[item.route]"
      routerLinkActive="active">
     {{ item.title }}
   </li>
 </ul>
+
+<!-- Ahora como menuItems es de tipo signal, para ver el valor de lo que en el array
+hay que usar los parentesis menuItems() -->
